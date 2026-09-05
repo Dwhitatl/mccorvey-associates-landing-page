@@ -186,6 +186,13 @@
   .btn-disabled{opacity:.5;cursor:not-allowed}
   .btn-disabled:hover{transform:none}
 
+  .brand img{width:54px !important;height:54px !important}
+  .brand{gap:13px}
+  .brand-text{display:flex;flex-direction:column;line-height:1.15}
+  .brand-name{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.24rem;color:var(--brand)}
+  .brand-tag{font-size:.66rem;letter-spacing:.085em;text-transform:uppercase;color:var(--gold);margin-top:3px;font-weight:600}
+  @media (max-width:860px){.brand img{width:46px !important;height:46px !important}.brand-name{font-size:1.05rem}.brand-tag{font-size:.58rem;letter-spacing:.06em}}
+  @media (max-width:480px){.brand-tag{display:none}.brand-name{display:none}}
   .price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
   @media (max-width:900px){.price-grid{grid-template-columns:1fr}}
   .price-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;display:flex;flex-direction:column}
