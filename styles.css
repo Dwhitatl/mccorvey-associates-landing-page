@@ -186,6 +186,20 @@
   .btn-disabled{opacity:.5;cursor:not-allowed}
   .btn-disabled:hover{transform:none}
 
+  .price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media (max-width:900px){.price-grid{grid-template-columns:1fr}}
+  .price-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;display:flex;flex-direction:column}
+  .price-card-feature{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+  .price-name{font-family:"Fraunces",Georgia,serif;font-size:1.18rem;color:var(--brand);margin-bottom:8px}
+  .price-amt{font-family:"Fraunces",Georgia,serif;font-size:2.1rem;color:var(--gold);line-height:1;margin-bottom:6px}
+  .price-meta{font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px}
+  .price-card p{margin:0 0 16px;font-size:.96rem;color:var(--ink-soft);flex:1}
+  .price-note{font-size:.85rem;color:var(--ink-faint);border-top:1px solid var(--line);padding-top:12px}
+  .price-retainer{margin-top:18px;background:var(--fill);color:#fff;border-radius:22px;padding:30px 34px}
+  .pr-text strong{display:block;font-family:"Fraunces",Georgia,serif;font-size:1.18rem;margin-bottom:8px;color:#fff}
+  .pr-text span{color:rgba(255,255,255,.85);font-size:.96rem;line-height:1.6}
+  .price-foot{margin-top:24px;font-size:.85rem;color:var(--ink-faint);max-width:70ch}
+
   .cta-band{
     background:var(--fill);color:#fff;border-radius:28px;
     padding:56px 44px;text-align:left;
