@@ -376,7 +376,7 @@
 </script>  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+<!-- STAGED: Stripe checkout markup added below (window.__processDonation calls) but enableDonation is NOT yet turned on for this page. Buttons are inert until update_landing_page is called with enableDonation:true once Michael's own Stripe key is connected. -->
 <nav data-section="navbar">
   <div class="wrap nav-inner">
     <a href="#top" class="brand">
@@ -506,6 +506,12 @@
   <div class="wrap">
     <p class="lead-in reveal">No surprises.</p>
     <h2 class="section-h reveal">What working together costs</h2>
+
+    <div class="checkout-email reveal">
+      <label for="email">Your email (for payment receipt)</label>
+      <input type="email" id="email" placeholder="you@company.com" required />
+    </div>
+
     <div class="price-grid">
 
       <div class="price-card reveal">
@@ -514,6 +520,9 @@
         <div class="price-meta">90 minutes</div>
         <p>A working session to map your path: which certifications you qualify for, which NAICS codes fit your business, and what filing actually involves. You leave with a written summary you can act on yourself.</p>
         <div class="price-note">Credited toward any package below if you move forward within 30 days.</div>
+        <div class="price-pay pending">
+          <button type="button" class="btn btn-primary" onclick="window.__processDonation && window.__processDonation({amount:250, label:'Certification Readiness Session'})">Pay $250</button>
+        </div>
       </div>
 
       <div class="price-card reveal">
@@ -522,6 +531,9 @@
         <div class="price-meta">WOSB &middot; SDVOSB &middot; HUBZone &middot; SAM.gov</div>
         <p>Michael prepares your application with you &mdash; SAM.gov registration, NAICS selection, supporting documentation, and a full review before anything is filed.</p>
         <div class="price-note">Half at start, half at filing.</div>
+        <div class="price-pay pending">
+          <button type="button" class="btn btn-primary" onclick="window.__processDonation && window.__processDonation({amount:1000, label:'Done-With-You Certification'})">Pay $1,000</button>
+        </div>
       </div>
 
       <div class="price-card price-card-feature reveal">
@@ -530,6 +542,9 @@
         <div class="price-meta">The most involved filing</div>
         <p>The 8(a) program requires narrative statements, financial disclosures, and social and economic disadvantage documentation. It also unlocks sole-source contracts. Prepared end to end.</p>
         <div class="price-note">Paid in thirds across the engagement.</div>
+        <div class="price-pay pending">
+          <button type="button" class="btn btn-primary" onclick="window.__processDonation && window.__processDonation({amount:2500, label:'Full 8(a) Application'})">Pay $2,500</button>
+        </div>
       </div>
 
       <div class="price-card reveal">
@@ -537,7 +552,7 @@
         <div class="price-amt">from $5,500</div>
         <div class="price-meta">Scoped to your organization</div>
         <p>Multi-certification strategy, team training, or a structured build-out for an organization that needs more than a single filing. Designed around what you're actually trying to accomplish.</p>
-        <div class="price-note">Scope and price confirmed before any work begins.</div>
+        <div class="price-note">Scope and price confirmed before any work begins &mdash; not paid here.</div>
       </div>
 
     </div>
