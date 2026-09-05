@@ -1,4 +1,4 @@
-(function(){try{var t=localStorage.getItem('mccorvey-theme');document.documentElement.setAttribute('data-theme', t==='dark' ? 'dark' : 'light');}catch(e){}})();
+(function(){try{var t=localStorage.getItem('mccorvey-theme');document.documentElement.setAttribute('data-theme', t==='light' ? 'light' : 'dark');}catch(e){}})();
 
 (function(){
   var timers = new WeakMap();
