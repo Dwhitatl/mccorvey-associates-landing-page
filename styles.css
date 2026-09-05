@@ -209,6 +209,7 @@
     display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
     font-size:.85rem;color:var(--ink-faint);
   }
+  .footer-note{margin-top:34px;font-size:.8rem;line-height:1.6;color:var(--ink-faint);max-width:62ch}
 
   .reveal{opacity:0}
   @media (prefers-reduced-motion: reduce){ .reveal{opacity:1 !important} }
