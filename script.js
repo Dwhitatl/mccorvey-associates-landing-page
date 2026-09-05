@@ -40,16 +40,12 @@
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(reduced) return;
   gsap.registerPlugin(ScrollTrigger);
-
   gsap.set('.reveal', {autoAlpha: 0});
   ScrollTrigger.batch('.reveal', {
     start: 'top 88%',
     once: false,
     onEnter: function(batch){
-      gsap.fromTo(batch,
-        {autoAlpha: 0, y: 40, scale: 0.97},
-        {autoAlpha: 1, y: 0, scale: 1, duration: 1.1, ease: 'power3.out', stagger: 0.1, overwrite: true}
-      );
+      gsap.fromTo(batch, {autoAlpha: 0, y: 40, scale: 0.97}, {autoAlpha: 1, y: 0, scale: 1, duration: 1.1, ease: 'power3.out', stagger: 0.1, overwrite: true});
     },
     onEnterBack: function(batch){
       gsap.to(batch, {autoAlpha: 1, y: 0, scale: 1, duration: 0.7, ease: 'power3.out', stagger: 0.08, overwrite: true});
@@ -61,17 +57,9 @@
       gsap.to(batch, {autoAlpha: 0, y: 40, scale: 0.97, duration: 0.45, ease: 'power2.in', overwrite: true});
     }
   });
-
   if(window.ScrollSmoother){
     try{
-      ScrollSmoother.create({
-        wrapper: "#smooth-wrapper",
-        content: "#smooth-content",
-        smooth: 1.2,
-        effects: true,
-        smoothTouch: 0.1,
-        normalizeScroll: true
-      });
+      ScrollSmoother.create({ wrapper: "#smooth-wrapper", content: "#smooth-content", smooth: 1.2, effects: true, smoothTouch: 0.1, normalizeScroll: true });
     }catch(e){}
   }
 })();
