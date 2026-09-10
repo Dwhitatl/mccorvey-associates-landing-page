@@ -172,3 +172,11 @@
   .footer-note{margin-top:34px;font-size:.8rem;line-height:1.6;color:var(--ink-faint);max-width:62ch}
   .reveal{opacity:0}
   @media (prefers-reduced-motion: reduce){ .reveal{opacity:1 !important} }
+  .cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media (max-width:900px){ .cred-grid{grid-template-columns:1fr} }
+  .cred-card{border:1px solid var(--line);background:var(--card);border-radius:22px;padding:28px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px}
+  .cred-cert-img{width:100%;max-width:260px;border-radius:10px;border:1px solid var(--line);display:block}
+  .cred-caption strong{display:block;font-family:"Fraunces",Georgia,serif;font-size:1.05rem;margin-bottom:4px;color:var(--ink)}
+  .cred-caption span{font-size:.9rem;color:var(--ink-soft)}
+  .cred-video-wrap{width:100%;max-width:260px;aspect-ratio:9/16;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000}
+  .cred-video-wrap iframe{width:100%;height:100%;border:0;display:block}
